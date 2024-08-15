@@ -18,6 +18,7 @@ void EmptyLinkFunctionForGeneratedCodeSnakeElementBase() {}
 	ENGINE_API UClass* Z_Construct_UClass_AActor();
 	UPackage* Z_Construct_UPackage__Script_SnakeGame();
 	ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
+	SNAKEGAME_API UClass* Z_Construct_UClass_UInteractable_NoRegister();
 // End Cross Module References
 	DEFINE_FUNCTION(ASnakeElementBase::execSetFirstElementType)
 	{
@@ -77,6 +78,7 @@ void EmptyLinkFunctionForGeneratedCodeSnakeElementBase() {}
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_MeshComponent;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+		static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
 	};
@@ -104,6 +106,9 @@ void EmptyLinkFunctionForGeneratedCodeSnakeElementBase() {}
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ASnakeElementBase_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASnakeElementBase_Statics::NewProp_MeshComponent,
 	};
+		const UE4CodeGen_Private::FImplementedInterfaceParams Z_Construct_UClass_ASnakeElementBase_Statics::InterfaceParams[] = {
+			{ Z_Construct_UClass_UInteractable_NoRegister, (int32)VTABLE_OFFSET(ASnakeElementBase, IInteractable), false },
+		};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_ASnakeElementBase_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<ASnakeElementBase>::IsAbstract,
 	};
@@ -114,11 +119,11 @@ void EmptyLinkFunctionForGeneratedCodeSnakeElementBase() {}
 		DependentSingletons,
 		FuncInfo,
 		Z_Construct_UClass_ASnakeElementBase_Statics::PropPointers,
-		nullptr,
+		InterfaceParams,
 		UE_ARRAY_COUNT(DependentSingletons),
 		UE_ARRAY_COUNT(FuncInfo),
 		UE_ARRAY_COUNT(Z_Construct_UClass_ASnakeElementBase_Statics::PropPointers),
-		0,
+		UE_ARRAY_COUNT(InterfaceParams),
 		0x009000A4u,
 		METADATA_PARAMS(Z_Construct_UClass_ASnakeElementBase_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_ASnakeElementBase_Statics::Class_MetaDataParams))
 	};
@@ -131,7 +136,7 @@ void EmptyLinkFunctionForGeneratedCodeSnakeElementBase() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ASnakeElementBase, 2187846616);
+	IMPLEMENT_CLASS(ASnakeElementBase, 1904224604);
 	template<> SNAKEGAME_API UClass* StaticClass<ASnakeElementBase>()
 	{
 		return ASnakeElementBase::StaticClass();

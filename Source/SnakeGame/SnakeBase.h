@@ -50,4 +50,6 @@ public:
 
 	void AddSnakeElement(int ElementsNum = 1);
 	void Move();
+	UFUNCTION()
+		void SnakeElementOverlap(ASnakeElementBase* OverlappedElement, AActor* Other);
 };
