@@ -83,13 +83,13 @@ void ASnakeBase::SnakeElementOverlap(ASnakeElementBase* OverlappedElement, AActo
 {
 	if (IsValid(OverlappedElement))
 	{
-		int32 Elementindex;
+		int32 ElemIndex;
 		SnakeElements.Find(OverlappedElement, ElemIndex);
 		bool bIsFirst = ElemIndex == 0;
 		IInteractable* InteractableInterface = Cast<IInteractable>(other);
 		if (InteractableInterface)
 		{
-			InteractableInterface->interact(this, bIsFirst);
+			InteractableInterface->Interact(this, bIsFirst);
 		}
 	}
 }

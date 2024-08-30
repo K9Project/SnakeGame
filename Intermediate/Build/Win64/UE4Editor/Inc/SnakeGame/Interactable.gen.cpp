@@ -17,55 +17,9 @@ void EmptyLinkFunctionForGeneratedCodeInteractable() {}
 	SNAKEGAME_API UClass* Z_Construct_UClass_UInteractable();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UInterface();
 	UPackage* Z_Construct_UPackage__Script_SnakeGame();
-	ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
 // End Cross Module References
-	DEFINE_FUNCTION(IInteractable::execinteract)
-	{
-		P_GET_OBJECT(AActor,Z_Param_Interactor);
-		P_FINISH;
-		P_NATIVE_BEGIN;
-		P_THIS->interact(Z_Param_Interactor);
-		P_NATIVE_END;
-	}
 	void UInteractable::StaticRegisterNativesUInteractable()
 	{
-		UClass* Class = UInteractable::StaticClass();
-		static const FNameNativePtrPair Funcs[] = {
-			{ "interact", &IInteractable::execinteract },
-		};
-		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
-	}
-	struct Z_Construct_UFunction_UInteractable_interact_Statics
-	{
-		struct Interactable_eventinteract_Parms
-		{
-			AActor* Interactor;
-		};
-		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_Interactor;
-		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
-#endif
-		static const UE4CodeGen_Private::FFunctionParams FuncParams;
-	};
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UInteractable_interact_Statics::NewProp_Interactor = { "Interactor", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(Interactable_eventinteract_Parms, Interactor), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(nullptr, 0) };
-	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UInteractable_interact_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UInteractable_interact_Statics::NewProp_Interactor,
-	};
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UInteractable_interact_Statics::Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "Interactable.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UInteractable_interact_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UInteractable, nullptr, "interact", nullptr, nullptr, sizeof(Interactable_eventinteract_Parms), Z_Construct_UFunction_UInteractable_interact_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UInteractable_interact_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020400, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UInteractable_interact_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UInteractable_interact_Statics::Function_MetaDataParams)) };
-	UFunction* Z_Construct_UFunction_UInteractable_interact()
-	{
-		static UFunction* ReturnFunction = nullptr;
-		if (!ReturnFunction)
-		{
-			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UInteractable_interact_Statics::FuncParams);
-		}
-		return ReturnFunction;
 	}
 	UClass* Z_Construct_UClass_UInteractable_NoRegister()
 	{
@@ -74,7 +28,6 @@ void EmptyLinkFunctionForGeneratedCodeInteractable() {}
 	struct Z_Construct_UClass_UInteractable_Statics
 	{
 		static UObject* (*const DependentSingletons[])();
-		static const FClassFunctionLinkInfo FuncInfo[];
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
@@ -84,9 +37,6 @@ void EmptyLinkFunctionForGeneratedCodeInteractable() {}
 	UObject* (*const Z_Construct_UClass_UInteractable_Statics::DependentSingletons[])() = {
 		(UObject* (*)())Z_Construct_UClass_UInterface,
 		(UObject* (*)())Z_Construct_UPackage__Script_SnakeGame,
-	};
-	const FClassFunctionLinkInfo Z_Construct_UClass_UInteractable_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_UInteractable_interact, "interact" }, // 2809314111
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UInteractable_Statics::Class_MetaDataParams[] = {
@@ -101,11 +51,11 @@ void EmptyLinkFunctionForGeneratedCodeInteractable() {}
 		nullptr,
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
-		FuncInfo,
+		nullptr,
 		nullptr,
 		nullptr,
 		UE_ARRAY_COUNT(DependentSingletons),
-		UE_ARRAY_COUNT(FuncInfo),
+		0,
 		0,
 		0,
 		0x000840A1u,
@@ -120,7 +70,7 @@ void EmptyLinkFunctionForGeneratedCodeInteractable() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UInteractable, 1739954068);
+	IMPLEMENT_CLASS(UInteractable, 3569824819);
 	template<> SNAKEGAME_API UClass* StaticClass<UInteractable>()
 	{
 		return UInteractable::StaticClass();

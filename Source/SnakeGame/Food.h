@@ -8,7 +8,7 @@
 #include "Food.generated.h"
 
 UCLASS()
-class SNAKEGAME_API AFood : public AActor, IInteractable
+class SNAKEGAME_API AFood : public AActor, public IInteractable
 {
 	GENERATED_BODY()
 	
@@ -24,5 +24,5 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
-	virtual void interact(AActor* Interactor, bool bIsHead) override;
+	virtual void Interact(AActor* Interactor, bool bIsHead) override;
 };
