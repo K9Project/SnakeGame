@@ -21,8 +21,8 @@ void EmptyLinkFunctionForGeneratedCodeSnakeGame_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000000,
-				0xC0DE3626,
-				0xF415D985,
+				0x044AD90F,
+				0xEF88CF3D,
 				METADATA_PARAMS(nullptr, 0)
 			};
 			UE4CodeGen_Private::ConstructUPackage(ReturnPackage, PackageParams);
