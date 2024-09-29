@@ -20,6 +20,7 @@ void EmptyLinkFunctionForGeneratedCodePlayerPawnBase() {}
 	ENGINE_API UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
 	SNAKEGAME_API UClass* Z_Construct_UClass_ASnakeBase_NoRegister();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
+	SNAKEGAME_API UClass* Z_Construct_UClass_AFood_NoRegister();
 // End Cross Module References
 	DEFINE_FUNCTION(APlayerPawnBase::execHandlePlayerHorizontalInput)
 	{
@@ -133,6 +134,14 @@ void EmptyLinkFunctionForGeneratedCodePlayerPawnBase() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_SnakeActorClass_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FClassPropertyParams NewProp_SnakeActorClass;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Food_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_Food;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_FoodClass_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FClassPropertyParams NewProp_FoodClass;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -174,10 +183,26 @@ void EmptyLinkFunctionForGeneratedCodePlayerPawnBase() {}
 	};
 #endif
 	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_APlayerPawnBase_Statics::NewProp_SnakeActorClass = { "SnakeActorClass", nullptr, (EPropertyFlags)0x0014000000010001, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(APlayerPawnBase, SnakeActorClass), Z_Construct_UClass_ASnakeBase_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_APlayerPawnBase_Statics::NewProp_SnakeActorClass_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_APlayerPawnBase_Statics::NewProp_SnakeActorClass_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APlayerPawnBase_Statics::NewProp_Food_MetaData[] = {
+		{ "Category", "PlayerPawnBase" },
+		{ "ModuleRelativePath", "PlayerPawnBase.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APlayerPawnBase_Statics::NewProp_Food = { "Food", nullptr, (EPropertyFlags)0x0010000000000004, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(APlayerPawnBase, Food), Z_Construct_UClass_AFood_NoRegister, METADATA_PARAMS(Z_Construct_UClass_APlayerPawnBase_Statics::NewProp_Food_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_APlayerPawnBase_Statics::NewProp_Food_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APlayerPawnBase_Statics::NewProp_FoodClass_MetaData[] = {
+		{ "Category", "PlayerPawnBase" },
+		{ "ModuleRelativePath", "PlayerPawnBase.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_APlayerPawnBase_Statics::NewProp_FoodClass = { "FoodClass", nullptr, (EPropertyFlags)0x0014000000010001, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(APlayerPawnBase, FoodClass), Z_Construct_UClass_AFood_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_APlayerPawnBase_Statics::NewProp_FoodClass_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_APlayerPawnBase_Statics::NewProp_FoodClass_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_APlayerPawnBase_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerPawnBase_Statics::NewProp_PawnCamera,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerPawnBase_Statics::NewProp_SnakeActor,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerPawnBase_Statics::NewProp_SnakeActorClass,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerPawnBase_Statics::NewProp_Food,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerPawnBase_Statics::NewProp_FoodClass,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_APlayerPawnBase_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<APlayerPawnBase>::IsAbstract,
@@ -206,7 +231,7 @@ void EmptyLinkFunctionForGeneratedCodePlayerPawnBase() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(APlayerPawnBase, 938340412);
+	IMPLEMENT_CLASS(APlayerPawnBase, 3163802242);
 	template<> SNAKEGAME_API UClass* StaticClass<APlayerPawnBase>()
 	{
 		return APlayerPawnBase::StaticClass();

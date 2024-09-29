@@ -15,18 +15,18 @@ class AActor;
 #endif
 #define SNAKEGAME_SnakeBase_generated_h
 
-#define SnakeGame_Source_SnakeGame_SnakeBase_h_23_SPARSE_DATA
-#define SnakeGame_Source_SnakeGame_SnakeBase_h_23_RPC_WRAPPERS \
+#define SnakeGame_Source_SnakeGame_SnakeBase_h_78_SPARSE_DATA
+#define SnakeGame_Source_SnakeGame_SnakeBase_h_78_RPC_WRAPPERS \
  \
 	DECLARE_FUNCTION(execSnakeElementOverlap);
 
 
-#define SnakeGame_Source_SnakeGame_SnakeBase_h_23_RPC_WRAPPERS_NO_PURE_DECLS \
+#define SnakeGame_Source_SnakeGame_SnakeBase_h_78_RPC_WRAPPERS_NO_PURE_DECLS \
  \
 	DECLARE_FUNCTION(execSnakeElementOverlap);
 
 
-#define SnakeGame_Source_SnakeGame_SnakeBase_h_23_INCLASS_NO_PURE_DECLS \
+#define SnakeGame_Source_SnakeGame_SnakeBase_h_78_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesASnakeBase(); \
 	friend struct Z_Construct_UClass_ASnakeBase_Statics; \
@@ -35,7 +35,7 @@ public: \
 	DECLARE_SERIALIZER(ASnakeBase)
 
 
-#define SnakeGame_Source_SnakeGame_SnakeBase_h_23_INCLASS \
+#define SnakeGame_Source_SnakeGame_SnakeBase_h_78_INCLASS \
 private: \
 	static void StaticRegisterNativesASnakeBase(); \
 	friend struct Z_Construct_UClass_ASnakeBase_Statics; \
@@ -44,7 +44,7 @@ public: \
 	DECLARE_SERIALIZER(ASnakeBase)
 
 
-#define SnakeGame_Source_SnakeGame_SnakeBase_h_23_STANDARD_CONSTRUCTORS \
+#define SnakeGame_Source_SnakeGame_SnakeBase_h_78_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API ASnakeBase(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(ASnakeBase) \
@@ -57,7 +57,7 @@ private: \
 public:
 
 
-#define SnakeGame_Source_SnakeGame_SnakeBase_h_23_ENHANCED_CONSTRUCTORS \
+#define SnakeGame_Source_SnakeGame_SnakeBase_h_78_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API ASnakeBase(ASnakeBase&&); \
@@ -68,28 +68,28 @@ public: \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(ASnakeBase)
 
 
-#define SnakeGame_Source_SnakeGame_SnakeBase_h_23_PRIVATE_PROPERTY_OFFSET
-#define SnakeGame_Source_SnakeGame_SnakeBase_h_20_PROLOG
-#define SnakeGame_Source_SnakeGame_SnakeBase_h_23_GENERATED_BODY_LEGACY \
+#define SnakeGame_Source_SnakeGame_SnakeBase_h_78_PRIVATE_PROPERTY_OFFSET
+#define SnakeGame_Source_SnakeGame_SnakeBase_h_75_PROLOG
+#define SnakeGame_Source_SnakeGame_SnakeBase_h_78_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	SnakeGame_Source_SnakeGame_SnakeBase_h_23_PRIVATE_PROPERTY_OFFSET \
-	SnakeGame_Source_SnakeGame_SnakeBase_h_23_SPARSE_DATA \
-	SnakeGame_Source_SnakeGame_SnakeBase_h_23_RPC_WRAPPERS \
-	SnakeGame_Source_SnakeGame_SnakeBase_h_23_INCLASS \
-	SnakeGame_Source_SnakeGame_SnakeBase_h_23_STANDARD_CONSTRUCTORS \
+	SnakeGame_Source_SnakeGame_SnakeBase_h_78_PRIVATE_PROPERTY_OFFSET \
+	SnakeGame_Source_SnakeGame_SnakeBase_h_78_SPARSE_DATA \
+	SnakeGame_Source_SnakeGame_SnakeBase_h_78_RPC_WRAPPERS \
+	SnakeGame_Source_SnakeGame_SnakeBase_h_78_INCLASS \
+	SnakeGame_Source_SnakeGame_SnakeBase_h_78_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define SnakeGame_Source_SnakeGame_SnakeBase_h_23_GENERATED_BODY \
+#define SnakeGame_Source_SnakeGame_SnakeBase_h_78_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	SnakeGame_Source_SnakeGame_SnakeBase_h_23_PRIVATE_PROPERTY_OFFSET \
-	SnakeGame_Source_SnakeGame_SnakeBase_h_23_SPARSE_DATA \
-	SnakeGame_Source_SnakeGame_SnakeBase_h_23_RPC_WRAPPERS_NO_PURE_DECLS \
-	SnakeGame_Source_SnakeGame_SnakeBase_h_23_INCLASS_NO_PURE_DECLS \
-	SnakeGame_Source_SnakeGame_SnakeBase_h_23_ENHANCED_CONSTRUCTORS \
+	SnakeGame_Source_SnakeGame_SnakeBase_h_78_PRIVATE_PROPERTY_OFFSET \
+	SnakeGame_Source_SnakeGame_SnakeBase_h_78_SPARSE_DATA \
+	SnakeGame_Source_SnakeGame_SnakeBase_h_78_RPC_WRAPPERS_NO_PURE_DECLS \
+	SnakeGame_Source_SnakeGame_SnakeBase_h_78_INCLASS_NO_PURE_DECLS \
+	SnakeGame_Source_SnakeGame_SnakeBase_h_78_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
