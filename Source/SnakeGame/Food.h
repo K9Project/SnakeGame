@@ -62,5 +62,10 @@ public:
 
 	virtual void Interact(AActor* Interactor, bool BeIsHead) override;
 
+	
 	void CreateNewFood(int countFood);
+	
+	/*
+	void CreateNewFood();
+	*/
 };

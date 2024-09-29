@@ -73,9 +73,11 @@ void AFood::Tick(float DeltaTime)
 
 void AFood::Interact(AActor* Interactor, bool BeIsHead)
 {
-	if (BeIsHead) {
+	if (BeIsHead) 
+	{
 		auto Snake = Cast<ASnakeBase>(Interactor);
-		if (IsValid(Snake)) {
+		if (IsValid(Snake))
+		{
 			CreateNewFood(1);
 			Snake->AddSnakeElement();
 			Snake->AddSpeed();
@@ -86,7 +88,8 @@ void AFood::Interact(AActor* Interactor, bool BeIsHead)
 
 void AFood::CreateNewFood(int countFood)
 {
-	for (int i = 0; i < countFood; i++) {
+	for (int i = 0; i < countFood; i++) 
+	{
 		NewLocation.X = rand() % 960 - 480;
 		NewLocation.Y = rand() % 960 - 480;
 		NewLocation.Z = 10;
@@ -94,3 +97,12 @@ void AFood::CreateNewFood(int countFood)
 		GetWorld()->SpawnActor<AFood>(FoodClass, NewTransform);
 	}
 }
+
+/*
+void AFood::CreateNewFood()
+{
+	FVector NewLocation(FMath::FRandRange(-400, 400), FMath::FRandRange(-400, 400), 0);
+	FTransform NewTransform = FTransform(NewLocation);
+	GetWorld()->SpawnActor<AFood>(FoodClass, NewTransform);
+}
+*/

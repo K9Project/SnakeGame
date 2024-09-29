@@ -94,7 +94,7 @@ APlayerPawnBase::APlayerPawnBase()
 	PawnCamera = CreateDefaultSubobject<UCameraComponent>(TEXT("PawnCamera"));
 	RootComponent = PawnCamera;
 	PawnCamera->ProjectionMode = ECameraProjectionMode::Orthographic;
-	PawnCamera->SetOrthoWidth(1980);
+	PawnCamera->SetOrthoWidth(2500);
 }
 
 // Called when the game starts or when spawned
@@ -143,4 +143,21 @@ void APlayerPawnBase::HandlePlayerVerticalInput(float value) {
 void APlayerPawnBase::HandlePlayerHorizontalInput(float value) {
 	if (value > 0 && SnakeActor->LastMoveDirection != EMovementDirection::LEFT) SnakeActor->LastMoveDirection = EMovementDirection::RIGHT;
 	else if (value < 0 && SnakeActor->LastMoveDirection != EMovementDirection::RIGHT) SnakeActor->LastMoveDirection = EMovementDirection::LEFT;
+}
+
+void APlayerPawnBase::AddRandomFood()
+{
+	FRotator StartPointRotation = FRotator(0, 0, 0); 
+	float SpawnX = FMath::FRandRange(MinX, MaxX); 
+	float SpawnY = FMath::FRandRange(MinY, MaxY); 
+
+	FVector StartPoint = FVector(SpawnX, SpawnY, SpawnZ);
+
+	if (SnakeActor)
+	{
+		if (GetWorld())
+		{
+			GetWorld()->SpawnActor<AFood>(FoodClass, FTransform(StartPointRotation, StartPoint));
+		}
+	}
 }
