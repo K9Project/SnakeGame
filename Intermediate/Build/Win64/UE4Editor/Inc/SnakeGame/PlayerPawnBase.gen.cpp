@@ -98,7 +98,9 @@ void EmptyLinkFunctionForGeneratedCodePlayerPawnBase() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_APlayerPawnBase_HandlePlayerVerticalInput_Statics::Function_MetaDataParams[] = {
+		{ "Comment", "/*\n\x09""float MinY = -1420.f; float MaxY = 1420.f;\n\x09""float MinX = -420.f; float MaxX = 1420.f;\n\x09""float SpawnZ = 60.f;\n\n\x09void AddRandomFood();\n\n\x09""float StepDelay = 1.0f;\n\x09""float BuferTime = 0;\n\x09*/" },
 		{ "ModuleRelativePath", "PlayerPawnBase.h" },
+		{ "ToolTip", "float MinY = -1420.f; float MaxY = 1420.f;\nfloat MinX = -420.f; float MaxX = 1420.f;\nfloat SpawnZ = 60.f;\n\nvoid AddRandomFood();\n\nfloat StepDelay = 1.0f;\nfloat BuferTime = 0;" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_APlayerPawnBase_HandlePlayerVerticalInput_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_APlayerPawnBase, nullptr, "HandlePlayerVerticalInput", nullptr, nullptr, sizeof(PlayerPawnBase_eventHandlePlayerVerticalInput_Parms), Z_Construct_UFunction_APlayerPawnBase_HandlePlayerVerticalInput_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_APlayerPawnBase_HandlePlayerVerticalInput_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_APlayerPawnBase_HandlePlayerVerticalInput_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_APlayerPawnBase_HandlePlayerVerticalInput_Statics::Function_MetaDataParams)) };
@@ -152,7 +154,7 @@ void EmptyLinkFunctionForGeneratedCodePlayerPawnBase() {}
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_APlayerPawnBase_Statics::FuncInfo[] = {
 		{ &Z_Construct_UFunction_APlayerPawnBase_HandlePlayerHorizontalInput, "HandlePlayerHorizontalInput" }, // 1100678685
-		{ &Z_Construct_UFunction_APlayerPawnBase_HandlePlayerVerticalInput, "HandlePlayerVerticalInput" }, // 3388327317
+		{ &Z_Construct_UFunction_APlayerPawnBase_HandlePlayerVerticalInput, "HandlePlayerVerticalInput" }, // 3251513144
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APlayerPawnBase_Statics::Class_MetaDataParams[] = {
@@ -231,7 +233,7 @@ void EmptyLinkFunctionForGeneratedCodePlayerPawnBase() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(APlayerPawnBase, 3163802242);
+	IMPLEMENT_CLASS(APlayerPawnBase, 2774109239);
 	template<> SNAKEGAME_API UClass* StaticClass<APlayerPawnBase>()
 	{
 		return APlayerPawnBase::StaticClass();

@@ -94,7 +94,7 @@ APlayerPawnBase::APlayerPawnBase()
 	PawnCamera = CreateDefaultSubobject<UCameraComponent>(TEXT("PawnCamera"));
 	RootComponent = PawnCamera;
 	PawnCamera->ProjectionMode = ECameraProjectionMode::Orthographic;
-	PawnCamera->SetOrthoWidth(2500);
+	PawnCamera->SetOrthoWidth(2700);
 }
 
 // Called when the game starts or when spawned
@@ -124,27 +124,32 @@ void APlayerPawnBase::SetupPlayerInputComponent(UInputComponent* PlayerInputComp
 }
 
 
-void APlayerPawnBase::CreateSnakeActor() {
+void APlayerPawnBase::CreateSnakeActor() 
+{
 	SnakeActor = GetWorld()->SpawnActor<ASnakeBase>(SnakeActorClass, FTransform());
 }
 
 
-void APlayerPawnBase::CreateFirstFood() {
+void APlayerPawnBase::CreateFirstFood() 
+{
 	Food = GetWorld()->SpawnActor<AFood>(FoodClass, FTransform());
 }
 
-void APlayerPawnBase::HandlePlayerVerticalInput(float value) {
-	if (IsValid(SnakeActor)) {
+void APlayerPawnBase::HandlePlayerVerticalInput(float value) 
+{
+	if (IsValid(SnakeActor)) 
+	{
 		if (value > 0 && SnakeActor->LastMoveDirection != EMovementDirection::DOWN) SnakeActor->LastMoveDirection = EMovementDirection::UP;
 		else if (value < 0 && SnakeActor->LastMoveDirection != EMovementDirection::UP) SnakeActor->LastMoveDirection = EMovementDirection::DOWN;
 	}
 }
 
-void APlayerPawnBase::HandlePlayerHorizontalInput(float value) {
+void APlayerPawnBase::HandlePlayerHorizontalInput(float value) 
+{
 	if (value > 0 && SnakeActor->LastMoveDirection != EMovementDirection::LEFT) SnakeActor->LastMoveDirection = EMovementDirection::RIGHT;
 	else if (value < 0 && SnakeActor->LastMoveDirection != EMovementDirection::RIGHT) SnakeActor->LastMoveDirection = EMovementDirection::LEFT;
 }
-
+/*
 void APlayerPawnBase::AddRandomFood()
 {
 	FRotator StartPointRotation = FRotator(0, 0, 0); 
@@ -161,3 +166,4 @@ void APlayerPawnBase::AddRandomFood()
 		}
 	}
 }
+*/

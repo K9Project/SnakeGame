@@ -92,7 +92,7 @@ public:
 
 	void CreateSnakeActor();
 	void CreateFirstFood();
-
+	/*
 	float MinY = -1420.f; float MaxY = 1420.f;
 	float MinX = -420.f; float MaxX = 1420.f;
 	float SpawnZ = 60.f;
@@ -101,7 +101,7 @@ public:
 
 	float StepDelay = 1.0f;
 	float BuferTime = 0;
-
+	*/
 	UFUNCTION()
 		void HandlePlayerVerticalInput(float value);
 	UFUNCTION()
